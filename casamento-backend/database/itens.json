@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nome": "Chaleira Elétrica para preparar momentos de tranquilidade",
+    "valor": 100,
+    "progresso": 0,
+    "imagem": "https://images.tcdn.com.br/img/img_prod/1153568/chaleira_eletrica_agratto_resid_220v_pto_1111_1_73166cd96ac907a4b1bf3715d7fe869a.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Vassoura mágica para quando o marido deixar tudo bagunçado",
+    "valor": 50,
+    "progresso": 0,
+    "imagem": "https://images.tcdn.com.br/img/img_prod/1078302/vassoura_para_pa_lobby_pro_preto_rubbermaid_3205_2_b5b13ccd5c34251762c798222fec111a.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Toalhas de banho gigantes para o casal relaxar",
+    "valor": 150,
+    "progresso": 0,
+    "imagem": "https://toalhashow.cdn.magazord.com.br/img/2023/10/produto/5218/colecao-egito-kit-toalhas-banho-gigante-plus-size-marrom-preta-toalha-show.jpg?ims=800x800"
+  },
+  {
+    "id": 4,
+    "nome": "Frigideira especial para ovos gourmet",
+    "valor": 50,
+    "progresso": 0,
+    "imagem": "https://electrolux.vtexassets.com/arquivos/ids/214594/panela_perspectiva_1000x1000_Principal.jpg?v=637721952451430000"
+  },
+  {
+    "id": 5,
+    "nome": "Liquidificador para criar sucos detox (e bater aquele milkshake!)",
+    "valor": 100,
+    "progresso": 0,
+    "imagem": "https://freitasvarejo.vteximg.com.br/arquivos/ids/184960/L99-FB1.jpg?v=638319570312570000"
+  },
+  {
+    "id": 6,
+    "nome": "Netflix vitalício do casal (indispensável para maratonas!)",
+    "valor": 150,
+    "progresso": 0,
+    "imagem": "https://yt3.googleusercontent.com/r4m9_f2nH87wTf1yoBFvwRe5pjE_lJIaKCZUkdgOq8MokC5dnpM6WbcJ4i5RQlBuBcsoRJB0cA=s900-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 7,
+    "nome": "Controle de volume da noiva – Para os momentos de game do noivo",
+    "valor": 100,
+    "progresso": 0,
+    "imagem": "https://static.vecteezy.com/ti/vetor-gratis/p3/7890395-volume-controle-icone-controle-volume-em-fundo-branco-vetor.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Air Fryer milagrosa para jantares práticos",
+    "valor": 250,
+    "progresso": 0,
+    "imagem": "https://mallorygroup.vtexassets.com/arquivos/ids/159373/Fritadeira-Eletrica-Digital-Premium-1.png?v=638349790963300000"
+  },
+  {
+    "id": 9,
+    "nome": "Cafeteira poderosa para energizar o casamento",
+    "valor": 150,
+    "progresso": 0,
+    "imagem": "https://d296pbmv9m7g8v.cloudfront.net/Custom/Content/Products/10/40/1040935_cafeteira-dolce-gusto-arno-genio-s-plus-dgs3-capsula-automatica-vermelha-10006431_m143_638597707583471762.jpg"
+  },
+  {
+    "id": 10,
+    "nome": "Pipoqueira para garantir que não pipocaremos na vida!",
+    "valor": 250,
+    "progresso": 0,
+    "imagem": "https://www.lojasmoveisamazonia.com.br/produtos/16461.png"
+  },
+  {
+    "id": 11,
+    "nome": "Aspirador robô – O salvador das migalhas noturnas",
+    "valor": 300,
+    "progresso": 0,
+    "imagem": "https://electrolux.vtexassets.com/arquivos/ids/218331/Robot_Vacuum_ERB10_Perspective_Electrolux_1000x1000-principal.jpg?v=637826060998670000"
+  },
+  {
+    "id": 12,
+    "nome": "Mixer turbo para fazer um mix de emoções",
+    "valor": 250,
+    "progresso": 0,
+    "imagem": "https://dular.vteximg.com.br/arquivos/ids/5869078-1000-1000/image-1a1be9fdaf1449739c1ce1c2eeaec60b.jpg?v=638228737570200000"
+  },
+  {
+    "id": 13,
+    "nome": "Jogo de Panelas - Porque panela cheia não faz barulho, só alegria",
+    "valor": 350,
+    "progresso": 0,
+    "imagem": "https://m.media-amazon.com/images/I/41kUogrr4qL._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "id": 14,
+    "nome": "Smart TV gigante para maratonas e filmes",
+    "valor": 1800,
+    "progresso": 0,
+    "imagem": "https://imgs.casasbahia.com.br/55064201/1g.jpg?imwidth=500"
+  },
+  {
+    "id": 15,
+    "nome": "Kit Ferramentas - Para consertar tudo, até o humor do casal",
+    "valor": 250,
+    "progresso": 0,
+    "imagem": "https://cdn.leroymerlin.com.br/products/jogo_de_ferramentas_108_pecas_dexter__89716123_0001_300x300.jpg"
+  },
+  {
+    "id": 16,
+    "nome": "Cadeira de Massagem - Para relaxar depois de um dia agitado",
+    "valor": 5000,
+    "progresso": 0,
+    "imagem": "https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(80)/massagea/catalog/poltrona-massageadora-turquesa-005.jpg"
+  },
+  {
+    "id": 17,
+    "nome": "Tábua de cortar – Para cortar ingredientes e não o clima",
+    "valor": 80,
+    "progresso": 0,
+    "imagem": "https://images.tcdn.com.br/img/img_prod/790341/tabua_de_churrasco_campeira_marcelo_bolinha_183_2_3b60efb410b62c06155b48212f565a81_20230207191611.jpg"
+  },
+  {
+    "id": 18,
+    "nome": "Faqueiro de luxo para jantares chiques",
+    "valor": 450,
+    "progresso": 0,
+    "imagem": "https://dcdn.mitiendanube.com/stores/002/062/862/products/whatsapp-image-2022-05-05-at-17-46-57-11-a04b5ecb333a4095c416517842625056-1024-1024.jpeg"
+  },
+  {
+    "id": 19,
+    "nome": "Suporte para bebidas (coca e água) – Para brindar cada conquista",
+    "valor": 150,
+    "progresso": 0,
+    "imagem": "https://m.media-amazon.com/images/I/61ss3revjvL._AC_UF350,350_QL80_.jpg"
+  },
+  {
+    "id": 20,
+    "nome": "Lua de Mel dos noivos",
+    "valor": 20000,
+    "progresso": 0,
+    "imagem": "https://virtualjoias.com/media/wysiwyg/virtualjoias-0902-Lugares-para-passar-lua-de-mel-imagem1-blog.jpg"
+  }
+]
