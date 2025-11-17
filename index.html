@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eduardo & Emilly - Nosso Casamento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonte fofa do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --rosa-pastel: #ffd6e8;
+      --rosa-pastel-forte: #ffb7d5;
+      --azul-pastel: #d7ecff;
+      --azul-pastel-forte: #a9d4ff;
+      --texto-principal: #5d4b58;
+      --dourado-suave: #c79c5c;
+      --branco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+      color: var(--texto-principal);
+      background: radial-gradient(circle at top left, var(--rosa-pastel) 0%, #ffeefa 35%, #f9fbff 60%, var(--azul-pastel) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Camada suave por cima do fundo */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 214, 232, 0.5), rgba(215, 236, 255, 0.7));
+      mix-blend-mode: screen;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 28px;
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.8);
+      padding: 32px 22px 32px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 40px 60px 48px;
+      }
+    }
+
+    /* Moldura delicada */
+    .container::before,
+    .container::after {
+      content: "";
+      position: absolute;
+      inset: 20px;
+      border-radius: 22px;
+      pointer-events: none;
+    }
+
+    .container::before {
+      border: 1px solid rgba(255, 183, 213, 0.7);
+    }
+
+    .container::after {
+      border: 1px dashed rgba(169, 212, 255, 0.6);
+      inset: 26px;
+    }
+
+    .top-decor {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    .top-decor .circle {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(10px);
+    }
+
+    .top-decor .circle.pink {
+      width: 140px;
+      height: 140px;
+      background: rgba(255, 214, 232, 0.8);
+      top: -40px;
+      left: -20px;
+    }
+
+    .top-decor .circle.blue {
+      width: 160px;
+      height: 160px;
+      background: rgba(215, 236, 255, 0.9);
+      top: -60px;
+      right: -20px;
+    }
+
+    .top-decor .circle.small {
+      width: 70px;
+      height: 70px;
+      background: rgba(255, 247, 252, 0.9);
+      top: 80px;
+      right: 120px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .headline {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .headline .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      background: rgba(255, 214, 232, 0.7);
+      color: #795064;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .headline .tag span.icon {
+      font-size: 16px;
+    }
+
+    .names {
+      font-family: "Great Vibes", cursive;
+      font-size: 44px;
+      line-height: 1.1;
+      color: #7a4d73;
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .names {
+        font-size: 58px;
+      }
+    }
+
+    .ampersand {
+      font-size: 0.9em;
+      color: var(--dourado-suave);
+      padding: 0 10px;
+    }
+
+    .subtext {
+      font-size: 14px;
+      color: #9c7d91;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 12px 0 22px;
+    }
+
+    .divider .line {
+      height: 1px;
+      width: 70px;
+      max-width: 22vw;
+      background: linear-gradient(to right, rgba(255, 183, 213, 0), rgba(255, 183, 213, 0.9));
+    }
+
+    .divider .line.right {
+      background: linear-gradient(to left, rgba(169, 212, 255, 0), rgba(169, 212, 255, 0.9));
+    }
+
+    .divider .heart {
+      font-size: 18px;
+      color: #ff8fb8;
+      animation: pulse 1.4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: scale(1.12);
+        opacity: 1;
+      }
+    }
+
+    .text-block {
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto 24px;
+    }
+
+    .text-block p + p {
+      margin-top: 12px;
+    }
+
+    .text-highlight {
+      font-weight: 600;
+      color: #7b4e67;
+    }
+
+    .important {
+      font-size: 14px;
+      color: #a0678b;
+      margin-top: 14px;
+      font-style: italic;
+    }
+
+    .details-card {
+      margin: 12px auto 24px;
+      max-width: 700px;
+      background: linear-gradient(135deg, rgba(255, 214, 232, 0.92), rgba(215, 236, 255, 0.95));
+      border-radius: 18px;
+      padding: 18px 16px 20px;
+      display: grid;
+      gap: 12px;
+      box-shadow: 0 12px 24px rgba(255, 166, 200, 0.35);
+      border: 1px solid rgba(255, 240, 250, 0.8);
+    }
+
+    @media (min-width: 640px) {
+      .details-card {
+        padding: 22px 26px;
+        grid-template-columns: 1.1fr 1.1fr;
+      }
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .detail-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(179, 150, 207, 0.5);
+      flex-shrink: 0;
+    }
+
+    .detail-text {
+      text-align: left;
+    }
+
+    .detail-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #986d8d;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .detail-main {
+      font-size: 15px;
+      font-weight: 600;
+      color: #5d4860;
+    }
+
+    .detail-sub {
+      font-size: 13px;
+      color: #856678;
+      margin-top: 2px;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+      color: #8a6d82;
+    }
+
+    .footer-note span {
+      font-weight: 500;
+    }
+
+    .signature {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #b088a6;
+    }
+
+    .signature .line {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, rgba(255, 214, 232, 0), rgba(255, 183, 213, 1));
+      margin: 0 auto 6px;
+    }
+
+    .signature-names {
+      font-family: "Great Vibes", cursive;
+      font-size: 28px;
+      color: #7a4d73;
+    }
+
+    /* Botão fofinho (caso queira usar depois para RSVP, etc.) */
+    .button-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+      gap: 16px;
+    }
+
+    .soft-button {
+      border: none;
+      cursor: default;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      background: linear-gradient(120deg, #ffb7d5, #ffd6e8);
+      color: #6b415c;
+      box-shadow:
+        0 10px 18px rgba(239, 149, 187, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .soft-button .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #ffffff;
+    }
+
+    /* Corações caindo */
+    .falling-hearts-container {
+      position: fixed;
+      pointer-events: none;
+      inset: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      top: -40px;
+      font-size: 16px;
+      color: #ff9ac4;
+      opacity: 0.8;
+      animation-name: fall;
+      animation-timing-function: linear;
+    }
+
+    .heart.small {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .heart.big {
+      font-size: 22px;
+      opacity: 0.9;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate3d(0, -40px, 0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.9;
+      }
+      100% {
+        transform: translate3d(0, 110vh, 0) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Corações caindo -->
+  <div class="falling-hearts-container" id="falling-hearts"></div>
+
+  <div class="container">
+    <div class="top-decor">
+      <div class="circle pink"></div>
+      <div class="circle blue"></div>
+      <div class="circle small"></div>
+    </div>
+
+    <div class="content">
+      <header class="headline">
+        <div class="tag">
+          <span class="icon">💌</span>
+          Convite Especial
+        </div>
+        <h1 class="names">
+          Eduardo <span class="ampersand">&</span> Emilly
+        </h1>
+        <div class="subtext">
+          vão dizer o seu “sim” em uma tarde feita de carinho, fé e muito amor
+        </div>
+
+        <div class="divider">
+          <div class="line"></div>
+          <div class="heart">💗</div>
+          <div class="line right"></div>
+        </div>
+      </header>
+
+      <section class="text-block">
+        <p>
+          Com o coração transbordando de alegria, queremos dividir com você um dos momentos mais importantes das nossas vidas:
+          o início oficial da nossa história como família.
+        </p>
+        <p>
+          Poucas pessoas estarão conosco nesse dia, porque escolhemos celebrar ao lado de quem realmente faz parte da
+          nossa caminhada, dos nossos sorrisos, lutas e conquistas. <span class="text-highlight">Você é uma dessas pessoas especiais.</span>
+        </p>
+        <p class="important">
+          A sua presença não é apenas um detalhe: é um presente e um carinho imenso para nós.
+        </p>
+      </section>
+
+      <section class="details-card">
+        <div class="detail-item">
+          <div class="detail-icon">📅</div>
+          <div class="detail-text">
+            <div class="detail-title">Data</div>
+            <div class="detail-main">14 de março de 2026</div>
+            <div class="detail-sub">Sábado, a partir das 17h</div>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">📍</div>
+          <div class="detail-text">
+            <div class="detail-title">Local</div>
+            <div class="detail-main">Sede XxX</div>
+            <div class="detail-sub">Um cantinho especial preparado com muito carinho para te receber.</div>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">💞</div>
+          <div class="detail-text">
+            <div class="detail-title">Presença</div>
+            <div class="detail-main">Você é parte da nossa história</div>
+            <div class="detail-sub">
+              Ter você ao nosso lado torna esse momento ainda mais inesquecível.
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">✨</div>
+          <div class="detail-text">
+            <div class="detail-title">Especial</div>
+            <div class="detail-main">Um convite limitado e cheio de amor</div>
+            <div class="detail-sub">
+              Apenas as pessoas mais especiais foram escolhidas para viver esse dia com a gente.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        Contamos com a sua presença para testemunhar o nosso <span>“sim”</span> e celebrar o amor conosco. 💖
+      </div>
+
+      <div class="button-row">
+        <button class="soft-button">
+          <span class="dot"></span>
+          Sua presença é o nosso melhor presente
+        </button>
+      </div>
+
+      <footer class="signature">
+        <div class="line"></div>
+        <div class="signature-names">Eduardo &amp; Emilly</div>
+        <div>Com carinho, esperamos por você.</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Script para criar corações caindo de forma contínua
+    const container = document.getElementById("falling-hearts");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+
+      // Tamanhos variados
+      const sizeRand = Math.random();
+      if (sizeRand < 0.33) {
+        heart.classList.add("small");
+      } else if (sizeRand > 0.75) {
+        heart.classList.add("big");
+      }
+
+      heart.textContent = Math.random() > 0.5 ? "💖" : "💗";
+
+      // Posição horizontal aleatória
+      heart.style.left = Math.random() * 100 + "vw";
+
+      // Duração e atraso diferentes para ficar mais natural
+      const duration = 6 + Math.random() * 6; // 6 a 12s
+      const delay = Math.random() * 2;        // até 2s
+
+      heart.style.animationDuration = duration + "s";
+      heart.style.animationDelay = delay + "s";
+
+      container.appendChild(heart);
+
+      // Remove o coração depois que termina a animação
+      setTimeout(() => {
+        heart.remove();
+      }, (duration + delay) * 1000);
+    }
+
+    // Cria vários corações inicialmente
+    for (let i = 0; i < 20; i++) {
+      setTimeout(createHeart, i * 250);
+    }
+
+    // Continua criando ao longo do tempo
+    setInterval(createHeart, 700);
+  </script>
+</body>
+</html>
